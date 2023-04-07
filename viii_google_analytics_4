@@ -1,0 +1,13 @@
+<h2> Table of Contents </h2>
+<ol>
+<ol dir="auto">
+<li>Google Analytics 4
+<ol dir="auto">
+<li>Google Signals</li>
+<li>Google Analytics Bidding</li>
+<li>Custom Events/Metrics/Dimensions</li>
+<li>Measurement Protocol</li>
+<li>Consent Mode</li>
+<li>GA4 Data in BigQuery</li>
+</ol>
+</li>
