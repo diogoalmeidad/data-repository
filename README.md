@@ -21,5 +21,6 @@ Purpose: Sharing my collection of resources for teaching and work.
 <li>Google Tag Manager</li>
 <li>Google Analytics 4</li>
 <li>Google Tag Manager</li>
+<li>Looker</li>
 <li>Privacy Sandbox</li>
 </ol>
