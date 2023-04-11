@@ -43,6 +43,9 @@
  ## GA4 Tutorials:
  - [Google Analytics official channel](https://www.youtube.com/watch?v=oJx9DpXtmAE&list=PLI5YfMzCfRtZ4bHJJDl_IJejxMwZFiBwz)
  
+ ## GA4 in BigQuery Tutorials:
+- [Accessing Event, User and Item Data](https://adswerve.com/blog/ga4-bigquery-tips-event-parameters-and-other-repeated-fields-part-two/?utm_campaign=Client_2_23&utm_medium=email&_hsmi=248166973&_hsenc=p2ANqtz-90qyZ3sBHI-657ecdVjCcirfeAl6L7Jd5Cjyl8u1iovQVyJZ_VI-3UbY9Hlx0rKo9SUumONob8NtUQuAmuAuErpyHlhQ&utm_source=newsletter) 
+ 
  
  
  
