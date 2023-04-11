@@ -38,6 +38,11 @@
  ## GA4 Data in BigQuery:
 -> Google Analytics doesn't export Google Signals data, therefore event data is different between the platform as Google Signals deduplicates user data (user counts and event counts);
 -> Some attribution models like first-click, lineaer, time-decay and position-based in GA4 are going to be deprecated in September, but can be built [on BigQuery](https://www.ga4bigquery.com/how-to-build-your-own-ga4-marketing-attribution-model-comparison-tool-in-bigquery-and-looker-studio/)
+ - [GA4 BigQuery documentation](https://developers.google.com/analytics/bigquery?utm_source=convertkit&utm_medium=email&utm_campaign=Useful%20resources%20for%20technical%20marketing%2C%20new%20podcast%20collaboration...%20%E2%80%93%20Simmer%20Newsletter%20%2350%20-%2010069565): Can find here examples of queries
+ 
+ ## GA4 Tutorials:
+ - [Google Analytics official channel](https://www.youtube.com/watch?v=oJx9DpXtmAE&list=PLI5YfMzCfRtZ4bHJJDl_IJejxMwZFiBwz)
+ 
  
  
  
