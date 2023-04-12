@@ -45,6 +45,15 @@
  
  ## GA4 in BigQuery Tutorials:
 - [Accessing Event, User and Item Data](https://adswerve.com/blog/ga4-bigquery-tips-event-parameters-and-other-repeated-fields-part-two/?utm_campaign=Client_2_23&utm_medium=email&_hsmi=248166973&_hsenc=p2ANqtz-90qyZ3sBHI-657ecdVjCcirfeAl6L7Jd5Cjyl8u1iovQVyJZ_VI-3UbY9Hlx0rKo9SUumONob8NtUQuAmuAuErpyHlhQ&utm_source=newsletter) 
+ - [Differences between GA4 and BQ](https://developers.google.com/analytics/blog/2023/bigquery-vs-ui?utm_source=convertkit&utm_medium=email&utm_campaign=Google%20releases%2C%20WebKit%20update...%20%E2%80%93%20Simmer%20Newsletter%20%2352%20-%2010511153): 
+   - Active users vs Total Users (Primary user metric in GA4 is Active Users [if it mentions user it is active user and not total users]). To compare with BigQuery we need to filter for active users to compare:
+   - HyperLogLog++: GA4 estimates users and sessions using HyperLogLog++ so an unique count is an approximation. In BigQuery we can calculate normally;
+   - Latent updates to data: If we have measurement protocol it can take up to 72h to show the data in BigQuery;
+   - High cardinality: In GA4 if we have lots of cardinality, it aggregates to 'Others' while in BigQuery we have access to granular data;
+   - Google Signals: not in BigQuery like previously mentioned;
+   - Data modelling with Consent Mode: GA4 has modellation, while BigQuery doesn't;
+   - Session source data: There's first user session source or event level, but not session level in BigQuery;
+   - Calculation errors
  
  
  
