@@ -11,3 +11,11 @@
 - Processes are initialized by incoming HTTP requests;
 - Requests are digested by clients (GA4, UA);
 - Client parses the request, generates event data object (event name) that is used by tags to send the data to their endpoints (Facebook, Google Ads, etc.) [outgoing HTTP requests]
+
+## Initiatives
+[Soteria Project](https://github.com/google/gps_soteria):
+- Allows to send the profit through server side by using Firestore and SSGTM;
+- Firestore is a NoSQL document database that has a native connector (template) to SS GTM;
+- SS GTM then will read the document that stores the SKU profit;
+- After this, SS GTM will send either through Measurement Protocol the profit to Google Analytics or through encrypted Conversion Value to Google Ads (floodlights not available yet);
+- We can store the profit by storing on the cloud the CSV or by storing the profit on BigQuery and then sending to Firestore.
