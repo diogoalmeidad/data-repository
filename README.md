@@ -19,7 +19,7 @@ Purpose: Sharing my collection of resources for teaching and work.
 <li>Git</li>
 <li>Google Cloud Platform</li>
 <li>Google Tag Manager</li>
-<li>Google Analytics 4</li>
+<li>Google Analytics</li>
 <li>Google Tag Manager</li>
 <li>Looker</li>
 <li>Privacy Sandbox</li>
