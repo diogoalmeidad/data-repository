@@ -14,7 +14,7 @@ Purpose: Sharing my collection of resources for teaching and work.
 </ol>
 </li>
 <li>SQL</li>
-<li>Econometrics (in Python)</li>
+<li>Statistics</li>
 <li>Big data</li>
 <li>Git</li>
 <li>Google Cloud Platform</li>
