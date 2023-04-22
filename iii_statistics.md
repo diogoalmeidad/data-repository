@@ -1,4 +1,5 @@
-## Minimum Detectable Effect (MDE): Used to calculate the sample size - experiment owners need to estimate what is the percentage uplift that they expect the experiment to have 
+## Minimum Detectable Effect (MDE): 
+Used to calculate the sample size - experiment owners need to estimate what is the percentage uplift that they expect the experiment to have 
 
 ## [Markov Chains](https://blog.developer.adobe.com/understand-marketing-channel-effectiveness-using-hidden-markov-model-for-conversions-in-adobe-170592032fb6): 
 - What is it: Assigns probability from moving from one state to the other.
