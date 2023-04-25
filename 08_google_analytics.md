@@ -56,6 +56,9 @@
    - Session source data: There's first user session source or event level, but not session level in BigQuery;
    - Calculation errors
  
+ ## GA4 Updates:
+ - [Conversion counting](https://support.google.com/analytics/answer/13366706?utm_source=convertkit&utm_medium=email&utm_campaign=New+Simmer+course+released%2C+plenty+of+Google-related+news...+%E2%80%93+Simmer+Newsletter+%2353%20-%2010611678): It is now possible to count conversion per event (5 conversions in a session = 5 conversions) and per session (5 conversions in a session = 1 conversion)
+ 
  
  
  
