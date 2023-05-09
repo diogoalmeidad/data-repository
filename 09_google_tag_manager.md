@@ -19,3 +19,6 @@
 - SS GTM then will read the document that stores the SKU profit;
 - After this, SS GTM will send either through Measurement Protocol the profit to Google Analytics or through encrypted Conversion Value to Google Ads (floodlights not available yet);
 - We can store the profit by storing on the cloud the CSV or by storing the profit on BigQuery and then sending to Firestore.
+
+## Tutorials
+- [Fundamentals](https://developers.google.com/tag-platform/learn/sst-fundamentals?utm_source=convertkit&utm_medium=email&utm_campaign=Some%20excellent%20resources%20for%20technical%20marketing...%20%E2%80%93%20Simmer%20Newsletter%20%2351%20-%2010283594)
