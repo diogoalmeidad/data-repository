@@ -20,5 +20,12 @@
 - After this, SS GTM will send either through Measurement Protocol the profit to Google Analytics or through encrypted Conversion Value to Google Ads (floodlights not available yet);
 - We can store the profit by storing on the cloud the CSV or by storing the profit on BigQuery and then sending to Firestore.
 
+## Server Side GTM and GA4
+- Benefits:
+  1) If we use GA4 through SS GTM we can strip the IP Address before sending to Google, ensuring compliance with GDPR. We can use Server Side GTM Visitor-Region variable to determine the user location based on the IP instead of sending this information to the US;
+  2) We don't need to share Measurement ID with end users, thus reducing chance of spammy traffic and enhancing data accuracy;
+  3) We can filter hits from countries from where our services are not offered using sGTM Region variable;
+  4) We can modify the purchase value of GA4 purchase event like the margin data without end-user knowing.
+
 ## Tutorials
 - [Fundamentals](https://developers.google.com/tag-platform/learn/sst-fundamentals?utm_source=convertkit&utm_medium=email&utm_campaign=Some%20excellent%20resources%20for%20technical%20marketing...%20%E2%80%93%20Simmer%20Newsletter%20%2351%20-%2010283594)
