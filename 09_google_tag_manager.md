@@ -1,5 +1,12 @@
 # Google Tag Manager
 
+## Tips
+- Accessing something within an object like 'userAttributes: {country: 'United States'}' needs to be userAttributes.country - each level is separated with a dot;
+- Accessing values within an array: like 'transactionProducts [{sku:'DD44'}, {sku:'DD44'}] to get the SKU of the second product, need to specify which object we want to see transactionProducts.1.sku;
+- We can't create a datalayer variable to capture all parameters of each array, but there are some codes to get all (in Bonus)
+- 'Message' means that the dataLayer push was missing the 'event' key. You can still see which variables would have information, but can't fire tags on it;
+- Be aware of when the Customer ID is sent and the trigger that we use for it;
+
 ## Server Side Tracking
 [Benefits](https://www.analyticsmania.com/post/introduction-to-google-tag-manager-server-side-tagging/):
 - Reduced loading time of page: Because there's only one script loaded and then sent to the server and then there the actual processing takes place (and sending the data to other platforms), leads to a lower loading time since there's not multiple scripts running;
