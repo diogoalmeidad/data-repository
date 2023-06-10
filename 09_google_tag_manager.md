@@ -7,6 +7,10 @@
 - 'Message' means that the dataLayer push was missing the 'event' key. You can still see which variables would have information, but can't fire tags on it;
 - Be aware of when the Customer ID is sent and the trigger that we use for it;
 
+## Cookies
+- Pieces of information that website stores on the browser like to identify user;
+- 1st party cookies: behalf of website itself | 3rd party cookie: another website like Google places a cookie on your website and then when the user continues to browse the web, those cookies will be available and read there.
+
 ## Server Side Tracking
 [Benefits](https://www.analyticsmania.com/post/introduction-to-google-tag-manager-server-side-tagging/):
 - Reduced loading time of page: Because there's only one script loaded and then sent to the server and then there the actual processing takes place (and sending the data to other platforms), leads to a lower loading time since there's not multiple scripts running;
