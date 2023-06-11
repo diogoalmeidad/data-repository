@@ -11,6 +11,12 @@
 - Pieces of information that website stores on the browser like to identify user;
 - 1st party cookies: behalf of website itself | 3rd party cookie: another website like Google places a cookie on your website and then when the user continues to browse the web, those cookies will be available and read there.
 
+## Custom Javascript Variables
+- Needs to be an anonymous function, needs to return something;
+- Accessing elements on the website should be done on DOM Ready, not on container Loaded even though the value might show up there as well - wait until the website document is rendered;
+- Be careful with using querySelector if it's a long chain of CSS, because if one thing changes, it will break everything;
+- We can use the extension [GTM Variable Builder](https://chrome.google.com/webstore/detail/gtm-variable-builder/feeboihdgpananoagfmbohoogoncndba/related?hl=en)
+
 ## Server Side Tracking
 [Benefits](https://www.analyticsmania.com/post/introduction-to-google-tag-manager-server-side-tagging/):
 - Reduced loading time of page: Because there's only one script loaded and then sent to the server and then there the actual processing takes place (and sending the data to other platforms), leads to a lower loading time since there's not multiple scripts running;
@@ -23,7 +29,7 @@
 - Requests are digested by clients (GA4, UA);
 - Client parses the request, generates event data object (event name) that is used by tags to send the data to their endpoints (Facebook, Google Ads, etc.) [outgoing HTTP requests]
 
-##[Transformations](https://developers.google.com/tag-platform/tag-manager/server-side/transformations?hl=en)
+[Transformations](https://developers.google.com/tag-platform/tag-manager/server-side/transformations?hl=en)
 - For control over what event parameters is sent to which tag;
 - Allows to share what is explicitly defined, augment event parameters by creating rules to edit or add event data (like adding margin data), redact incoming information by excluding event parameters from tags;
 - If we select to allow parameters, all non explicitly mentioned parameters are excluded 
