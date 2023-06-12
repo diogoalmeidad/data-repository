@@ -26,7 +26,11 @@
 
 ## Cookies
 - Pieces of information that website stores on the browser like to identify user;
-- 1st party cookies: behalf of website itself | 3rd party cookie: another website like Google places a cookie on your website and then when the user continues to browse the web, those cookies will be available and read there.
+- 1st party cookies: behalf of website itself | 3rd party cookie: another website like Google places a cookie on your website and then when the user continues to browse the web, those cookies will be available and read there;
+- We can create a cookie using a [Custom HTML](https://www.analyticsmania.com/post/cookies-with-google-tag-manager/) or through a Template;
+- Through HTML: We could, for example, create a variable that captures a query parameter like the affiliate_id, store in a cookie and then send to GA4. In this case the trigger should be if the page url has the parameter or if the cookie is not undefined. It might be that sometimes the cookie can take a while to be created, so in this case we need to create a Custom Javascript to either return the variable with the cookie value that is capturing the value from the URL or to return the value of the cookie if it has already been created;
+- Through Template we can install the 'Cookie Creator' template, in permissions add a new cookie name and create a tag with the cookie name and value (the variable) - need to add the domain starting with '.site.com' to make the cookie available in all sub-domains;
+- Use cases: Only fire tag after X amount of actions | block email pop ups to subscribers
 
 ## Custom Javascript Variables
 - Needs to be an anonymous function, needs to return something;
