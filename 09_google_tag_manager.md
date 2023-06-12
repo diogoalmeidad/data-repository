@@ -6,7 +6,18 @@
 - We can't create a datalayer variable to capture all parameters of each array, but there are some codes to get all (in Bonus)
 - 'Message' means that the dataLayer push was missing the 'event' key. You can still see which variables would have information, but can't fire tags on it;
 - Be aware of when the Customer ID is sent and the trigger that we use for it;
-- Auto-event variable requires interaction from the user, DOM element variable doesn't 
+- Auto-event variable requires interaction from the user, DOM element variable doesn't;
+- Container Loaded = Page View - GTM Snippet is loaded (gtm.js) | DOM Ready is when the browser has rendered the HTML file it gets from the server and creates DOM (gtm.dom)| Window Loaded when everything is loaded (gtm.load);
+- Firing and exception need to happen on the same event, so we can't put for example firing on gtm.js and exception on gtm.load;
+- Tag sequencing ignores exceptions as sequencing has higher priority;
+- Priority doesn't lead directly to be fired first as it also depends on how heavy is the tag. It just changes the order that they are executed.
+
+## [CSS Selectors](https://www.simoahava.com/gtm-tips/10-useful-css-selectors/)
+- If we do something like '.red-button', it means we are targeting the class of red-button;
+- If we do something like '#important', it means we are targeting the ID of important;
+- If we do something like 'a', it means we are targeting all the elements 'a';
+- If we do something like '.main > .red-button', we are targeting an element that has a class red-button which is a direct child of another element that has the class main;
+- If we do something like '.main.red-button', we are targeting a class that has a blank space that should not be there 'class=main red-button'
 
 ## Cookies
 - Pieces of information that website stores on the browser like to identify user;
