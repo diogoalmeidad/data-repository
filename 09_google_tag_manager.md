@@ -17,7 +17,12 @@
 - If we do something like '#important', it means we are targeting the ID of important;
 - If we do something like 'a', it means we are targeting all the elements 'a';
 - If we do something like '.main > .red-button', we are targeting an element that has a class red-button which is a direct child of another element that has the class main;
-- If we do something like '.main.red-button', we are targeting a class that has a blank space that should not be there 'class=main red-button'
+- If we do something like '.main.red-button', we are targeting a class that has a blank space that should not be there 'class=main red-button';
+- If we do something like '.green a', we are looking for the links of the blocks (link elements are 'a') that are anywhere under the green class;
+- To trigger based on this, it needs to be 'Click Element';
+- Wildcare CSS Selector: If we do something like 'button.one, button.two *' we are targeting either the button with class one or the button with class two and everything below them;
+- To test: Go to console and enter document.querySelectorAll('');
+- [To learn CSS](https://flukeout.github.io/)
 
 ## Cookies
 - Pieces of information that website stores on the browser like to identify user;
