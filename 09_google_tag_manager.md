@@ -32,6 +32,32 @@
 - Through Template we can install the 'Cookie Creator' template, in permissions add a new cookie name and create a tag with the cookie name and value (the variable) - need to add the domain starting with '.site.com' to make the cookie available in all sub-domains;
 - Use cases: Only fire tag after X amount of actions | block email pop ups to subscribers
 
+## Local Storage // Session Storage
+- Can't be shared across subdomains unlike cookies;
+- Session storage expires once you close the browser tab while localStorage ( browserStorage) doesn't have an expiration date unless explicitly said. Cookie storage has a manual configuration set;
+- It's only client side, server side it's only for cookies;
+- You can set a localStorage/Session through the following HTML Code:
+ <script> localStorage.setItem('affiliate_id', {{url - affiliate_id}}) </script>
+  Where we want to set, what is the value;
+- To get the value, create a custom javascript with return localStorage.getItem('affiliate_id') 
+
+## Lookup table (like a Vlookup)
+- Allows to not duplicate things;
+- Input variable: what is the variable that is going to be evaluated;
+- Like if we have two different websites and two different GA4s, the input can be the page hostname and the input will be the different domains while the output will be the GA4 Measurement IDs - then on the GA4 config tag, change the measurement ID to the lookup table;
+- All values are exact matches.
+
+## RegEx table (more process heavy compared to Lookup, but more flexible)
+- '|' means OR like 'cat|dog+ matches for cat OR dog
+- '.' any character like 'ca.t' can match for cart, cast but won't for carper or cat;
+- '*' means that the preceeding symbol can exist 0 or multiples times so 'ca*t' can match for ct, cat, caat, caaaaaaaat but won't for cart;
+- '.*' means there can be 0 or any number of other characters after 'ca.*t' can match cat, cart, carpet;
+- '^' need to start with that so '^mydomain' matches mydomain.com, mydomain.co.uk;
+- '$' needs to end with that regex so 'com$' mydomain.com, www.domain.com;
+- '\' escapes another regex character, meaning that it removes the power of the symbol so money\$ matches for money$, money$$$ - the $ loses the meaning of having to end with money;
+- The logic is the same - there is an input variable that is evaluated and then on the pattern you insert the logic it should look into (regex) and then provides an output;
+- We need to go to advanced settings and remove 'full matches only' and 'enable capture groups and replace functionality'
+
 ## Custom Javascript Variables
 - Needs to be an anonymous function, needs to return something;
 - Accessing elements on the website should be done on DOM Ready, not on container Loaded even though the value might show up there as well - wait until the website document is rendered;
