@@ -58,6 +58,13 @@
 - The logic is the same - there is an input variable that is evaluated and then on the pattern you insert the logic it should look into (regex) and then provides an output;
 - We need to go to advanced settings and remove 'full matches only' and 'enable capture groups and replace functionality'
 
+## iFrame Tracking:
+- One HTML website is inside another website;
+- Problems: can't track actions of iFrame unless we insert the GTM javascript code inside the iFrame | cross-domain tracking can be a problem as 3rd party cookies are being blocked by browsers;
+- We need a separate container for the iFrame and install on the website;
+- We need to enter preview mode on the website of the iFrame (child) and then enter the parent child and enter debug mode. We enable the debug mode for the child and we will see 2 GTM environments in the debug mode with different symbols to indicate which you are looking into;
+- We need to go to GTM Child create a Custom HTML code based on [Simo Ahava's code](https://www.simoahava.com/analytics/cookieless-tracking-cross-site-iframes/) and edit the parent origin so that the dataLayer pushes from the iFrame is sent to the container of the parent page 
+
 ## Custom Javascript Variables
 - Needs to be an anonymous function, needs to return something;
 - Accessing elements on the website should be done on DOM Ready, not on container Loaded even though the value might show up there as well - wait until the website document is rendered;
@@ -97,4 +104,4 @@
   4) We can modify the purchase value of GA4 purchase event like the margin data without end-user knowing.
 
 ## Tutorials
-- [Fundamentals](https://developers.google.com/tag-platform/learn/sst-fundamentals?utm_source=convertkit&utm_medium=email&utm_campaign=Some%20excellent%20resources%20for%20technical%20marketing...%20%E2%80%93%20Simmer%20Newsletter%20%2351%20-%2010283594)
+- [Fundamentals of Server Side](https://developers.google.com/tag-platform/learn/sst-fundamentals?utm_source=convertkit&utm_medium=email&utm_campaign=Some%20excellent%20resources%20for%20technical%20marketing...%20%E2%80%93%20Simmer%20Newsletter%20%2351%20-%2010283594)
