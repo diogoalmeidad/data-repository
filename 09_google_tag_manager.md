@@ -63,7 +63,8 @@
 - Problems: can't track actions of iFrame unless we insert the GTM javascript code inside the iFrame | cross-domain tracking can be a problem as 3rd party cookies are being blocked by browsers;
 - We need a separate container for the iFrame and install on the website;
 - We need to enter preview mode on the website of the iFrame (child) and then enter the parent child and enter debug mode. We enable the debug mode for the child and we will see 2 GTM environments in the debug mode with different symbols to indicate which you are looking into;
-- We need to go to GTM Child create a Custom HTML code based on [Simo Ahava's code](https://www.simoahava.com/analytics/cookieless-tracking-cross-site-iframes/) and edit the parent origin so that the dataLayer pushes from the iFrame is sent to the container of the parent page 
+- We need to go to GTM Child create a Custom HTML code based on [Simo Ahava's code](https://www.simoahava.com/analytics/cookieless-tracking-cross-site-iframes/) (looks for dataLayer pushes in the iFrame and then sends a postMessage (listener) to the parent page) and edit the parent origin so that the dataLayer pushes from the iFrame is sent to the container of the parent page;
+- Then go to the parent page and also add the second Custom HTML code on Simo Ahava's blog (catches postMessages). Now if we preview things, we can now see new events called iframe.gtm.linkClick for example
 
 ## Custom Javascript Variables
 - Needs to be an anonymous function, needs to return something;
