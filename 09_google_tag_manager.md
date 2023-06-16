@@ -75,7 +75,25 @@
 ## Debug:
 - To guarantee that the GTM implementation is accurate, see also if variables are ok on Google Analytics event tag to see if the event contains something or is undefined;
 - Chrome Developer Tools: **Elements** allows to see the DOM | **Console** allows to check CSS selector and JavaScript errors (see error and if there's a reference to GTM), do a dataLayer push to fire a tag | **Network** tab allows to see which requests are happening - we can filter for example by "google-a" to return all GA requests we can see the status code for example to see if the request was accepted | **Application > Cookies ** to see local and session storage and cookies;
-- DataLayer inspector: We can go to Console in dev tools and we see some information in green or yellow from Google and that's because of the adswerve extension. If it is brown it means there is an error with that push - we can expand to see the warning. We can also go to Other Analytics and apply it to track facebook events or SS 
+- DataLayer inspector: We can go to Console in dev tools and we see some information in green or yellow from Google and that's because of the adswerve extension. If it is brown it means there is an error with that push - we can expand to see the warning. We can also go to Other Analytics and apply it to track facebook events or SS
+
+## GA4 eCommerce Tracking
+
+
+## GA4 UserID
+- User logs in allows to understand phone with laptop is the same with desktop;
+- Need to send UserID to dataLayer like:
+  dataLayer.push({
+   'event': 'userData', //or login, wtv
+   'user_id' : '123abc' // can't be identifiable
+  })
+- 1) need to create a dataLayer variable with the userId;
+  2) Go to GA4 Config Tag - fields to set field name = "user_id" (exactly like this) value = variable;
+  3) check if the following events after login have on the config tag the user_id
+  4) Go to debug mode and verify if the user_id is there
+  5) GA4 in 24h: go to events and add comparison to see how many logged in with userid;
+  6) GA4 in explore: add in the rows the 'app-instance ID' those that look something like 2312312313.12313123 are the ones from GA4 that it creates automatically for those who did not login, the others with different formatting comes from you;
+  7) We can also pass on GA4 Config tag on the user properties the user_id and add as a custom dimension so we can use it on the exploration as well
 
 ## Server Side Tracking
 [Benefits](https://www.analyticsmania.com/post/introduction-to-google-tag-manager-server-side-tagging/):
