@@ -74,10 +74,16 @@
 
 ## Debug:
 - To guarantee that the GTM implementation is accurate, see also if variables are ok on Google Analytics event tag to see if the event contains something or is undefined;
-- Chrome Developer Tools: **Elements** allows to see the DOM | **Console** allows to check CSS selector and JavaScript errors (see error and if there's a reference to GTM), do a dataLayer push to fire a tag | **Network** tab allows to see which requests are happening - we can filter for example by "google-a" to return all GA requests we can see the status code for example to see if the request was accepted | **Application > Cookies ** to see local and session storage and cookies;
+- Chrome Developer Tools: **Elements** allows to see the DOM | **Console** allows to check CSS selector and JavaScript errors (see error and if there's a reference to GTM), do a dataLayer push to fire a tag | **Network** tab allows to see which requests are happening - we can filter for example by "google-a" to return all GA requests we can see the status code, for example, to see if the request was accepted | **Application > Cookies ** to see local and session storage and cookies;
 - DataLayer inspector: We can go to Console in dev tools and we see some information in green or yellow from Google and that's because of the adswerve extension. If it is brown it means there is an error with that push - we can expand to see the warning. We can also go to Other Analytics and apply it to track facebook events or SS
 
 ## GA4 eCommerce Tracking
+- Process: The event can be whatever it wants, but it needs to follow a specific structure (eCommerce object), then create a variable that captures the eCommerce item and create custom events to fire on a specific event and then create the GA4 tag alongside the parameters;
+- Implementation process: Agree on what we are going to track (which steps will we track in the funnel?), prepare the code snippets and the task description, configure the tags to send the data to GA, then test & debug and launch and monitor;
+- For the developers: Recommened to have an eCommerce object with items array. It needs to be consistent, so on view_item and add_to_cart, it needs to have the same parameters. Always needs to send currency, even if it's always the same (ISO Standard). Price as '1.99' or 1.99 doesn't mattter. But it doesn't accept $1.99
+
+
+
 
 
 ## GA4 UserID
@@ -91,16 +97,16 @@
   2) Go to GA4 Config Tag - fields to set field name = "user_id" (exactly like this) value = variable;
   3) check if the following events after login have on the config tag the user_id
   4) Go to debug mode and verify if the user_id is there
-  5) GA4 in 24h: go to events and add comparison to see how many logged in with userid;
+  5) GA4 in 24h: go to events and add a comparison to see how many logged in with userid;
   6) GA4 in explore: add in the rows the 'app-instance ID' those that look something like 2312312313.12313123 are the ones from GA4 that it creates automatically for those who did not login, the others with different formatting comes from you;
-  7) We can also pass on GA4 Config tag on the user properties the user_id and add as a custom dimension so we can use it on the exploration as well
+  7) We can also pass on GA4 Config tag on the user properties the user_id and add it as a custom dimension so we can use it on the exploration as well
 
 ## Server Side Tracking
 [Benefits](https://www.analyticsmania.com/post/introduction-to-google-tag-manager-server-side-tagging/):
-- Reduced loading time of page: Because there's only one script loaded and then sent to the server and then there the actual processing takes place (and sending the data to other platforms), leads to a lower loading time since there's not multiple scripts running;
-- Control what data is sent to 3rd party entities: With javascript scripts we are not sure of all data that we are collecting and sending to external entities, but with SS we can specify which data we want to share;
-- Reduce impact of adblockers: Even if users accept the cookies, if they have an adblocker it will block data to be sent to GA. SS domain at the moment are not blocked by adblockers;
-- [Temporary] extent duration of cookies: With ITP, cookies on Safari browsers were limited to 7 days. However with SS, the cookie can be stored there and will live for as long as you define. ATM Apple is working to change this;
+- Reduced loading time of page: Because there's only one script loaded and then sent to the server and then there the actual processing takes place (and sending the data to other platforms), leads to a lower loading time since there are not multiple scripts running;
+- Control what data is sent to 3rd party entities: With javascript scripts, we are not sure of all data that we are collecting and sending to external entities, but with SS we can specify which data we want to share;
+- Reduce the impact of adblockers: Even if users accept the cookies, if they have an adblocker it will block data to be sent to GA. SS domains at the moment are not blocked by adblockers;
+- [Temporary] extent duration of cookies: With ITP, cookies on Safari browsers were limited to 7 days. However, with SS, the cookie can be stored there and will live for as long as you define. ATM Apple is working to change this;
 
 [New data Flow](https://www.simoahava.com/analytics/server-side-tagging-google-tag-manager/):
 - Processes are initialized by incoming HTTP requests;
