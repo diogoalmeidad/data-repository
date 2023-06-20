@@ -80,7 +80,11 @@
 ## GA4 eCommerce Tracking
 - Process: The event can be whatever it wants, but it needs to follow a specific structure (eCommerce object), then create a variable that captures the eCommerce item and create custom events to fire on a specific event and then create the GA4 tag alongside the parameters;
 - Implementation process: Agree on what we are going to track (which steps will we track in the funnel?), prepare the code snippets and the task description, configure the tags to send the data to GA, then test & debug and launch and monitor;
-- For the developers: Recommened to have an eCommerce object with items array. It needs to be consistent, so on view_item and add_to_cart, it needs to have the same parameters. Always needs to send currency, even if it's always the same (ISO Standard). Price as '1.99' or 1.99 doesn't mattter. But it doesn't accept $1.99
+- For the developers: Recommened to have an eCommerce object with items array. It needs to be consistent, so on view_item and add_to_cart, it needs to have the same parameters. Always needs to send currency, even if it's always the same (ISO Standard). Price as '1.99' or 1.99 doesn't mattter. But it doesn't accept $1.99;
+- Check the template [here](https://docs.google.com/document/d/1kuOQP8HSdqEGbs7D0E7wlnr5cvVGRtYOeuUfKd_1zk0/edit) for the different codes for the different events;
+- For example, if it is impossible for a developer to know what was the item list name when viewing the item, we can delete the parameter;
+- For 'add_shipping_info' we need to put the shipping_tier which is the name of the delivery selected;
+- For 'add_payment_info'
 
 
 
