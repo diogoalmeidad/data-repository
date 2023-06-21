@@ -84,8 +84,7 @@
 - Check the template [here](https://docs.google.com/document/d/1kuOQP8HSdqEGbs7D0E7wlnr5cvVGRtYOeuUfKd_1zk0/edit) for the different codes for the different events;
 - For example, if it is impossible for a developer to know what was the item list name when viewing the item, we can delete the parameter;
 - For 'add_shipping_info' we need to put the shipping_tier which is the name of the delivery selected;
-- For 'add_payment_info'
-
+- Item-scoped customer dimensions: like payment_type (payment plan?), product_type (bundle?) - can be included in the items array like 'Size' - they don't need to be included in the event parameters, as long as we are sending the items array. Then we can create the CD in GA4 
 
 
 
