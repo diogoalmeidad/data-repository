@@ -8,7 +8,7 @@
 - See log: $ git log
 
 Concepts:
-- Repository: Copy of a git project
+- Repository: Copy of a git project. Can be local (on the computer) or remote (hosting service)
 - Commit: A version of the project
 - Directory: A folder
 - By default the command prompt opens on the home folder which is represented by '~'
@@ -22,3 +22,4 @@ Commands:
 - 'cd <path>: Change directory to a place. If I use 'cd ..' it goes back.
 - 'mkdir <name>': Creates a directory (make directory)
 - 'git config --global --list': Lists the variables in the Git configuration file and their values
+- 'git init -b <name>': Initializes git with a branch with a specific name
