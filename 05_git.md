@@ -20,6 +20,8 @@ Concepts:
    - Commit history: Every time you make a commit it is saved in the commit history - a commit is a version of a project. Each commit has an ID (commit hash);
    - Local repository: Repository stored on a computer
  - Branch: A line of development. Normally there's a primary line of development (main) and secondary branches (feature branches) to work on a specific part of a project. These are incorporated or combined through merges and rebasing.
+ - Merging: Process of integrating the changes made in one branch into another. You merge the source branch (contains changes) into the target branch (branch that receives changes, the one that is altered);
+ - Merge Commit: Created to tie two development histories together when they diverge - has more than one parent
 
 
 Commands:
@@ -36,4 +38,8 @@ Commands:
 - 'git cat-file -p <commit hash>': Check which commit is the parent of which commit
 - 'git branch': Gives list of branches;
 - 'git branch <name>': Creates a new branch;
-- 'git switch <name>' 'git checkout <name>': Switches to that branch
+- 'git switch <name>' 'git checkout <name>': Switches to that branch;
+- 'git merge <branch_name>': Integrates changes made from one branch into another branch
+
+
+
