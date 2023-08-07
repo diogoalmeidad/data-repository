@@ -39,7 +39,8 @@ Commands:
 - 'git branch': Gives list of branches;
 - 'git branch <name>': Creates a new branch;
 - 'git switch <name>' 'git checkout <name>': Switches to that branch;
-- 'git merge <branch_name>': Integrates changes made from one branch into another branch
+- 'git merge <branch_name>': Integrates changes made from one branch into another branch;
+- 'git checkout <commit_hash>': Checks out a commit, changing the head pointer to the commit you are changing into
 
 
 
