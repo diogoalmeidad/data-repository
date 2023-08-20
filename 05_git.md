@@ -21,7 +21,8 @@ Concepts:
    - Local repository: Repository stored on a computer
  - Branch: A line of development. Normally there's a primary line of development (main) and secondary branches (feature branches) to work on a specific part of a project. These are incorporated or combined through merges and rebasing.
  - Merging: Process of integrating the changes made in one branch into another. You merge the source branch (contains changes) into the target branch (branch that receives changes, the one that is altered);
- - Merge Commit: Created to tie two development histories together when they diverge - has more than one parent
+ - Merge Commit: Created to tie two development histories together when they diverge - has more than one parent;
+ - Shortname: A local repository can communicate with a remote repository when the LR has a connection to the RR. The connection has a name - shortname. Usually origin;
 
 
 Commands:
@@ -40,7 +41,10 @@ Commands:
 - 'git branch <name>': Creates a new branch;
 - 'git switch <name>' 'git checkout <name>': Switches to that branch;
 - 'git merge <branch_name>': Integrates changes made from one branch into another branch;
-- 'git checkout <commit_hash>': Checks out a commit, changing the head pointer to the commit you are changing into
+- 'git checkout <commit_hash>': Checks out a commit, changing the head pointer to the commit you are changing into;
+- 'git push': Upload data to a remote repository;
+- 'git remote add <shortname> <URL>': Add a connection to a remote repository named <shortname> at <URL> (creates the connection);
+- 'git remote -v': Lists the remote repository connections in the local repository with shortnames and URLs
 
 
 
