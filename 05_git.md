@@ -24,7 +24,8 @@ Concepts:
  - Merge Commit: Created to tie two development histories together when they diverge - has more than one parent;
  - Shortname: A local repository can communicate with a remote repository when the LR has a connection to the RR. The connection has a name - shortname. Usually origin;
  - When you push a local branch to a remote repository, a remote branch is created, which has a remote-tracking branch which is a reference in a local repository to the commit a remote branch pointed at the last time - like a bookmark;
- - To fully delete a branch you need to delete the remote branch, remote-tracking branch and local branch
+ - To fully delete a branch you need to delete the remote branch, remote-tracking branch and local branch;
+ - Upstream branch is the remote branch that a particular local branch tracks 
 
 
 Commands:
@@ -51,7 +52,9 @@ Commands:
 - 'git branch --all': Lists all local and remote-tracking branches;
 - 'git clone <URL> <directory_name>': Clone a remote repository (directory_name gives the name, or else it will keep the same name as in local - git clone https://github.com/diogoalmeidad/rainbow-remote.git friend-rainbow);
 - 'git push <shortname> -d <branch_name>': delete a remote branch and the associated remote-tracking branch
-- 'git branch -d <branch_name>': delete locally the branch 
+- 'git branch -d <branch_name>': delete locally the branch;
+- 'git branch -vv': lists the local branches and upstream branches;
+- 'git fetch <shortname>': Downloads data from the <shortname> remote repository
 
 
 
