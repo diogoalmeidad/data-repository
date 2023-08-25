@@ -55,7 +55,6 @@ Commands:
 - 'git branch -d <branch_name>': delete locally the branch;
 - 'git branch -vv': lists the local branches and upstream branches;
 - 'git fetch <shortname>': Downloads data from the <shortname> remote repository;
-- Fazer um teste
 
 
 
