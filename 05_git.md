@@ -58,3 +58,10 @@ Commands:
 
 
 
+Flow:
+- Change file
+- Save file
+- Add file
+- Commit
+- Push 
+
