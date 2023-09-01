@@ -86,7 +86,17 @@
 - For 'add_shipping_info' we need to put the shipping_tier which is the name of the delivery selected;
 - Item-scoped customer dimensions: like payment_type (payment plan?), product_type (bundle?) - can be included in the items array like 'Size' - they don't need to be included in the event parameters, as long as we are sending the items array. Then we can create the CD in GA4 
 
-
+## Enhanced Conversions
+[Introduction to EC](https://adswerve.com/blog/all-you-need-to-know-about-googles-enhanced-conversions/)
+- Objective: Model conversions that we can't observe due to privacy settings, technical limitations 
+- How: Uses hashed first-party data to recover unobserved conversions by matching with signed-in Google account information. 
+- It's not an estimation. They are actual conversions that have happened;
+- Implementation: 
+  1) On the tag in GTM enable 'include user-provided data from your website';
+  2) Create a user-provided data variable and pass the information like email, phone, name, address (it's mandatory to have either email, address or phone number);
+  3) Test to see if on GTM you see the Enhanced Conversion Values, alongside Conversion ID and label;
+  4) See if a network request was sent and check parameters like 'em' to see if email is being sent;
+  5) Check on Google Ads if for that tag under 'Diagnostics' you can see it recording enhanced conversions
 
 
 ## GA4 UserID

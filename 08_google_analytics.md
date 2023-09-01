@@ -33,6 +33,11 @@
  - [Custom Events/Metrics/Dimensions] <br>
  - [Measurement Protocol] <br>
  - [Consent Mode] <br>
+
+ [GA4 Data-Driven Attribution](https://adswerve.com/blog/googles-ga4-data-driven-attribution-model-explained/):
+ - First GA4 starts to predict likelihood of conversion, given history of interacting with channels. It will sees the paths that users have taken and see if those paths led to conversion or not and then trains a model that outputs likelihood that a path leads to conversion or not;
+ - The algorithm used is Shapley Value. In short, Shapley uses some features and leaves some other out until it has tried every single combination and will output a value that allows to understand how each feature affects the model;
+ - Since the data is trained on our GA4's property, the DDA model will be unique to us.
   
   
  ## GA4 Data in BigQuery:
