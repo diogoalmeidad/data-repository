@@ -25,7 +25,8 @@ Concepts:
  - Shortname: A local repository can communicate with a remote repository when the LR has a connection to the RR. The connection has a name - shortname. Usually origin;
  - When you push a local branch to a remote repository, a remote branch is created, which has a remote-tracking branch which is a reference in a local repository to the commit a remote branch pointed at the last time - like a bookmark;
  - To fully delete a branch you need to delete the remote branch, remote-tracking branch and local branch;
- - Upstream branch is the remote branch that a particular local branch tracks 
+ - Upstream branch is the remote branch that a particular local branch tracks. If we define one, we don't need later to specify when doing git pull and git push;
+ - If the development histories have diverged, you must tell Git whether we want to integrate the changes through merge or rebase;
 
 
 Commands:
@@ -55,6 +56,9 @@ Commands:
 - 'git branch -d <branch_name>': delete locally the branch;
 - 'git branch -vv': lists the local branches and upstream branches;
 - 'git fetch <shortname>': Downloads data from the <shortname> remote repository;
+- 'git branch -vv': check whether there has been an upstream branch defined;
+- 'git branch -u <shortname>/<branchname>': Define the upstream branch for the local branch;
+- 'git pull <shortname>/<branchname>': Fetch and integrate changes from <shortname> repository for the specified <branchname>;
 
 
 
