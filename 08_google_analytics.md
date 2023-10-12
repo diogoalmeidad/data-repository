@@ -15,6 +15,13 @@
 </ol>
 </li>
 
+## ✍🏻 What's new
+- UA created a new session everytime a user interacted with a new touchpoint (inflated sessions) and GA4 allows to have multiple touchpoints in the same session;
+- User acquisition will only look into the first method used to capture the user (first click);
+- Traffic acquisition also doesn't report multi-touch journeys but can capture multiple sessions (First last click);
+- Under engagement > conversion you will actually be able to see the data-driven impact across multiple sessions (best place to do attribution) -> the challenge is that this only applies for users who conver 
+
+
 ## ✍🏻 Concept Introductions 
  [Google Signals](https://infotrust.com/articles/google-signals-in-google-analytics-4-audience-strategy/): Collect cross-device data from users signed into a Google account. Allows reports on demographics data, cross-device reporting, cross-device remarketing and cross-device conversion exports to Google Ads. On audience creation, allows to use user-data to expand filtering
   Use Cases:
