@@ -68,6 +68,8 @@
    - Session source data: There's first user session source or event level, but not session level in BigQuery;
    - ClientID is an unique identifier based on the 'ga_' 1st party cookie -> when cookies are rejected, privacy_info.analytics_storage and privacy_info.ads_storage is set to 'No', making user_id and user_pseudo_id NULL values;
    - 'collected_traffic' dimensions are event-level data, while 'traffic_source' is user-level data. The former is parsed from the events page_location and page_referrer in an easier format, not relying on cookies;
+   - collected_traffic_source is expected to show null values for events where no traffic source dimensions have been observed. A simplified session consists of 5 pageviews and one key event and the user came through a Google Ads campaign. In this case, only the first pageview will actually carry observable campaign information, all other events and key event will not. As an expected result, only the first pageview row in BQ will populate values in the collected_traffic_source dimensions, while pageviews 2-5 and the key event will show null.
+
  
  ## GA4 Updates:
  - [Conversion counting](https://support.google.com/analytics/answer/13366706?utm_source=convertkit&utm_medium=email&utm_campaign=New+Simmer+course+released%2C+plenty+of+Google-related+news...+%E2%80%93+Simmer+Newsletter+%2353%20-%2010611678): It is now possible to count conversion per event (5 conversions in a session = 5 conversions) and per session (5 conversions in a session = 1 conversion);
