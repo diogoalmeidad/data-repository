@@ -66,7 +66,8 @@
    - Google Signals: not in BigQuery like previously mentioned;
    - Data modelling with Consent Mode: GA4 has modellation, while BigQuery doesn't;
    - Session source data: There's first user session source or event level, but not session level in BigQuery;
-   - Calculation errors
+   - ClientID is an unique identifier based on the 'ga_' 1st party cookie -> when cookies are rejected, privacy_info.analytics_storage and privacy_info.ads_storage is set to 'No', making user_id and user_pseudo_id NULL values;
+   - 'collected_traffic' dimensions are event-level data, while 'traffic_source' is user-level data. The former is parsed from the events page_location and page_referrer in an easier format, not relying on cookies;
  
  ## GA4 Updates:
  - [Conversion counting](https://support.google.com/analytics/answer/13366706?utm_source=convertkit&utm_medium=email&utm_campaign=New+Simmer+course+released%2C+plenty+of+Google-related+news...+%E2%80%93+Simmer+Newsletter+%2353%20-%2010611678): It is now possible to count conversion per event (5 conversions in a session = 5 conversions) and per session (5 conversions in a session = 1 conversion);
